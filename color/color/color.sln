@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "color", "color\color.csproj", "{4972C780-3A87-44A2-A8D9-26F8F3940607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "color.Test", "color.Test\color.Test.csproj", "{A8B5448D-75C9-4390-AA82-3EA34B1E0BF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4972C780-3A87-44A2-A8D9-26F8F3940607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4972C780-3A87-44A2-A8D9-26F8F3940607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4972C780-3A87-44A2-A8D9-26F8F3940607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4972C780-3A87-44A2-A8D9-26F8F3940607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8B5448D-75C9-4390-AA82-3EA34B1E0BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B5448D-75C9-4390-AA82-3EA34B1E0BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B5448D-75C9-4390-AA82-3EA34B1E0BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B5448D-75C9-4390-AA82-3EA34B1E0BF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D707B787-7774-459B-AFAF-AF49E1D28865}
+	EndGlobalSection
+EndGlobal
