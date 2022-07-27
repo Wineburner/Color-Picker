@@ -25,21 +25,25 @@ namespace color
             ColorBox.BackColor = Color.FromArgb(255, SliderRed.Value, SliderGreen.Value, SliderBlue.Value);
             var HexBuilder = new HexBuilder();
             TextBoxHex.Text = HexBuilder.ConvertSlideToHex(SliderRed.Value, SliderGreen.Value, SliderBlue.Value);
+            UpdateSliderNumbers();
         }
 
 
         private void SliderRed_Scroll(object sender, EventArgs e)
         {
+            UpdateSliderNumbers();
             ColorBoxChange();
         }
 
         private void SliderGreen_Scroll(object sender, EventArgs e)
         {
+            UpdateSliderNumbers();
             ColorBoxChange();
         }
 
         private void SliderBlue_Scroll(object sender, EventArgs e)
         {
+            UpdateSliderNumbers();
             ColorBoxChange();
         }
 
@@ -72,6 +76,13 @@ namespace color
             {
                 MessageBox.Show("Invalid Input");
             }
+        }
+
+        private void UpdateSliderNumbers()
+        {
+            OutputValueRed.Text = SliderRed.Value.ToString();
+            OutputValueGreen.Text = SliderGreen.Value.ToString();
+            OutputValueBlue.Text = SliderBlue.Value.ToString();
         }
     }
 }
