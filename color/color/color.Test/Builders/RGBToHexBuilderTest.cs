@@ -1,14 +1,14 @@
 using Xunit;
 using color.Builders;
 
-namespace color.Test.HexBuilders
+namespace color.Test.Builders
 {
-    public class HexBuilderTest
+    public class RGBToHexBuilderTest
     {
         [Fact]
         public void Should_Build_Hex_From_RGB()
         {
-            var hexBuilder = new HexBuilder();
+            var hexBuilder = new RGBToHexBuilder();
             var result = hexBuilder.ConvertSlideToHex(60, 40, 212);
             var hex = "#3C28D4";
 
@@ -18,7 +18,7 @@ namespace color.Test.HexBuilders
         [Fact]
         public void Should_Convert_Double_Hex_From_Value() 
         {
-            var hexBuilder = new HexBuilder();
+            var hexBuilder = new RGBToHexBuilder();
             var result = hexBuilder.ConverterToHex(94);
             var hex = "5E";
 

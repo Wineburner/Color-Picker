@@ -1,14 +1,14 @@
 ﻿using Xunit;
 using color.Builders;
 
-namespace color.Test.RGBBuilders
+namespace color.Test.Builders
 {
-    public class RGBBuilderTest
+    public class HexToRGBBuilderTest
     {
         [Fact]
         public void Should_Build_RGB_From_Hex()
         {
-            var RGBBuilder = new RGBBuilder();
+            var RGBBuilder = new HexToRGBBuilder();
             int[] results = RGBBuilder.ConvertHexToRGB("#3C2E80");
             int[] values = { 60, 46, 128 };
 
@@ -18,7 +18,7 @@ namespace color.Test.RGBBuilders
         [Fact]
         public void Should_Grab_Hex_Number_From_Char() 
         {
-            var RGBBuilder = new RGBBuilder();
+            var RGBBuilder = new HexToRGBBuilder();
             int result = RGBBuilder.GetValueFromChar('D');
             int value = 13;
 

@@ -41,9 +41,19 @@ namespace color
             this.OutputValueRed = new System.Windows.Forms.Label();
             this.OutputValueGreen = new System.Windows.Forms.Label();
             this.OutputValueBlue = new System.Windows.Forms.Label();
+            this.GroupBoxCMYK = new System.Windows.Forms.GroupBox();
+            this.LabelKey = new System.Windows.Forms.Label();
+            this.TextBoxKey = new System.Windows.Forms.TextBox();
+            this.LabelYellow = new System.Windows.Forms.Label();
+            this.TextBoxYellow = new System.Windows.Forms.TextBox();
+            this.LabelMagenta = new System.Windows.Forms.Label();
+            this.TextBoxMagenta = new System.Windows.Forms.TextBox();
+            this.labelCyan = new System.Windows.Forms.Label();
+            this.TextBoxCyan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.SliderRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SliderGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SliderBlue)).BeginInit();
+            this.GroupBoxCMYK.SuspendLayout();
             this.SuspendLayout();
             // 
             // SliderRed
@@ -156,11 +166,109 @@ namespace color
             this.OutputValueBlue.Text = "255";
             this.OutputValueBlue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // GroupBoxCMYK
+            // 
+            this.GroupBoxCMYK.Controls.Add(this.LabelKey);
+            this.GroupBoxCMYK.Controls.Add(this.TextBoxKey);
+            this.GroupBoxCMYK.Controls.Add(this.LabelYellow);
+            this.GroupBoxCMYK.Controls.Add(this.TextBoxYellow);
+            this.GroupBoxCMYK.Controls.Add(this.LabelMagenta);
+            this.GroupBoxCMYK.Controls.Add(this.TextBoxMagenta);
+            this.GroupBoxCMYK.Controls.Add(this.labelCyan);
+            this.GroupBoxCMYK.Controls.Add(this.TextBoxCyan);
+            this.GroupBoxCMYK.Location = new System.Drawing.Point(9, 165);
+            this.GroupBoxCMYK.Name = "GroupBoxCMYK";
+            this.GroupBoxCMYK.Size = new System.Drawing.Size(137, 138);
+            this.GroupBoxCMYK.TabIndex = 12;
+            this.GroupBoxCMYK.TabStop = false;
+            this.GroupBoxCMYK.Text = "CMYK";
+            // 
+            // LabelKey
+            // 
+            this.LabelKey.AutoSize = true;
+            this.LabelKey.Location = new System.Drawing.Point(10, 107);
+            this.LabelKey.Name = "LabelKey";
+            this.LabelKey.Size = new System.Drawing.Size(68, 15);
+            this.LabelKey.TabIndex = 13;
+            this.LabelKey.Text = "Key (Black):";
+            // 
+            // TextBoxKey
+            // 
+            this.TextBoxKey.Location = new System.Drawing.Point(84, 104);
+            this.TextBoxKey.Name = "TextBoxKey";
+            this.TextBoxKey.Size = new System.Drawing.Size(42, 23);
+            this.TextBoxKey.TabIndex = 14;
+            this.TextBoxKey.Text = "100%";
+            this.TextBoxKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TextBoxKey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxKey_KeyPress);
+            this.TextBoxKey.Leave += new System.EventHandler(this.TextBoxKey_Leave);
+            // 
+            // LabelYellow
+            // 
+            this.LabelYellow.AutoSize = true;
+            this.LabelYellow.Location = new System.Drawing.Point(34, 78);
+            this.LabelYellow.Name = "LabelYellow";
+            this.LabelYellow.Size = new System.Drawing.Size(44, 15);
+            this.LabelYellow.TabIndex = 13;
+            this.LabelYellow.Text = "Yellow:";
+            // 
+            // TextBoxYellow
+            // 
+            this.TextBoxYellow.Location = new System.Drawing.Point(84, 75);
+            this.TextBoxYellow.Name = "TextBoxYellow";
+            this.TextBoxYellow.Size = new System.Drawing.Size(42, 23);
+            this.TextBoxYellow.TabIndex = 4;
+            this.TextBoxYellow.Text = "100%";
+            this.TextBoxYellow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TextBoxYellow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxYellow_KeyPress);
+            this.TextBoxYellow.Leave += new System.EventHandler(this.TextBoxYellow_Leave);
+            // 
+            // LabelMagenta
+            // 
+            this.LabelMagenta.AutoSize = true;
+            this.LabelMagenta.Location = new System.Drawing.Point(21, 49);
+            this.LabelMagenta.Name = "LabelMagenta";
+            this.LabelMagenta.Size = new System.Drawing.Size(57, 15);
+            this.LabelMagenta.TabIndex = 3;
+            this.LabelMagenta.Text = "Magenta:";
+            // 
+            // TextBoxMagenta
+            // 
+            this.TextBoxMagenta.Location = new System.Drawing.Point(84, 46);
+            this.TextBoxMagenta.Name = "TextBoxMagenta";
+            this.TextBoxMagenta.Size = new System.Drawing.Size(42, 23);
+            this.TextBoxMagenta.TabIndex = 2;
+            this.TextBoxMagenta.Text = "100%";
+            this.TextBoxMagenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TextBoxMagenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxMagenta_KeyPress);
+            this.TextBoxMagenta.Leave += new System.EventHandler(this.TextBoxMagenta_Leave);
+            // 
+            // labelCyan
+            // 
+            this.labelCyan.AutoSize = true;
+            this.labelCyan.Location = new System.Drawing.Point(41, 20);
+            this.labelCyan.Name = "labelCyan";
+            this.labelCyan.Size = new System.Drawing.Size(37, 15);
+            this.labelCyan.TabIndex = 1;
+            this.labelCyan.Text = "Cyan:";
+            // 
+            // TextBoxCyan
+            // 
+            this.TextBoxCyan.Location = new System.Drawing.Point(84, 17);
+            this.TextBoxCyan.Name = "TextBoxCyan";
+            this.TextBoxCyan.Size = new System.Drawing.Size(42, 23);
+            this.TextBoxCyan.TabIndex = 0;
+            this.TextBoxCyan.Text = "100%";
+            this.TextBoxCyan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TextBoxCyan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxCyan_KeyPress);
+            this.TextBoxCyan.Leave += new System.EventHandler(this.TextBoxCyan_Leave);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 169);
+            this.ClientSize = new System.Drawing.Size(800, 314);
+            this.Controls.Add(this.GroupBoxCMYK);
             this.Controls.Add(this.OutputValueBlue);
             this.Controls.Add(this.OutputValueGreen);
             this.Controls.Add(this.OutputValueRed);
@@ -178,6 +286,8 @@ namespace color
             ((System.ComponentModel.ISupportInitialize)(this.SliderRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SliderGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SliderBlue)).EndInit();
+            this.GroupBoxCMYK.ResumeLayout(false);
+            this.GroupBoxCMYK.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,6 +307,15 @@ namespace color
         private System.Windows.Forms.Label OutputValueRed;
         private System.Windows.Forms.Label OutputValueGreen;
         private System.Windows.Forms.Label OutputValueBlue;
+        private System.Windows.Forms.GroupBox GroupBoxCMYK;
+        private System.Windows.Forms.Label LabelKey;
+        private System.Windows.Forms.TextBox TextBoxKey;
+        private System.Windows.Forms.Label LabelYellow;
+        private System.Windows.Forms.TextBox TextBoxYellow;
+        private System.Windows.Forms.Label LabelMagenta;
+        private System.Windows.Forms.TextBox TextBoxMagenta;
+        private System.Windows.Forms.Label labelCyan;
+        private System.Windows.Forms.TextBox TextBoxCyan;
     }
 }
 
