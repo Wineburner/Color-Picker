@@ -20,7 +20,7 @@ namespace color.Test.Builders
         {
             var CMYKBuilder = new RGBToCMYKBuilder();
             double[] resultsZero = CMYKBuilder.ConvertRGBToCMYK(0, 0, 0);
-            double[] valuesZero = { 0.0, 0, 0, 100 };
+            double[] valuesZero = { 0.0, 0, 0, 1};
 
             Assert.Equal(resultsZero, valuesZero);
         }
