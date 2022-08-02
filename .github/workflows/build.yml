@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore ./color
+      run: dotnet restore ./color/color
     - name: Build
-      run: dotnet build --no-restore ./color
+      run: dotnet build --no-restore ./color/color
     - name: Test
-      run: dotnet test --no-build --verbosity normal ./color
+      run: dotnet test --no-build --verbosity normal ./color/color
