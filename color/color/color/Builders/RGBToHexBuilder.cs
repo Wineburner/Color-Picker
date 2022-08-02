@@ -2,7 +2,7 @@
 
 namespace color.Builders
 {
-    public class HexBuilder
+    public class RGBToHexBuilder
     {
         private const int NUMBER_MAXIUM = 9;
         private const int HEX_MAXIUM = 16;
