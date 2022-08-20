@@ -12,12 +12,17 @@ namespace color
         private const int DEFAULT_VALUE = 123;
         private const int PERCENT_MULTIPLIER = 100;
         private double[] CMYK = { 0, 0, 0, 0 };
+        private readonly RGBToHexBuilder _rGBToHexBuilder;
+        private readonly RGBToCMYKBuilder _rGBToCMYKBuiler;
+        private readonly HexToRGBBuilder _hexToRGBBuilder;
 
-        public MainForm()
+        public MainForm(RGBToHexBuilder rGBToHexBuilder, RGBToCMYKBuilder rGBToCMYKBuilder, HexToRGBBuilder hexToRGBBuilder) 
         {
-
-
             InitializeComponent();
+
+            _rGBToHexBuilder = rGBToHexBuilder;
+            _rGBToCMYKBuiler = rGBToCMYKBuilder;
+            _hexToRGBBuilder = hexToRGBBuilder;
 
             SliderRed.Value = DEFAULT_VALUE;
             SliderGreen.Value = DEFAULT_VALUE;
@@ -29,10 +34,8 @@ namespace color
         public void ColorBoxChange()
         {
             ColorBox.BackColor = Color.FromArgb(255, SliderRed.Value, SliderGreen.Value, SliderBlue.Value);
-            var HexBuilder = new RGBToHexBuilder();
-            TextBoxHex.Text = HexBuilder.ConvertSlideToHex(SliderRed.Value, SliderGreen.Value, SliderBlue.Value);
-            var CMYKBuilder = new RGBToCMYKBuilder();
-            CMYK = CMYKBuilder.ConvertRGBToCMYK(SliderRed.Value, SliderGreen.Value, SliderBlue.Value);
+            TextBoxHex.Text = _rGBToHexBuilder.ConvertSlideToHex(SliderRed.Value, SliderGreen.Value, SliderBlue.Value);
+            CMYK = _rGBToCMYKBuiler.ConvertRGBToCMYK(SliderRed.Value, SliderGreen.Value, SliderBlue.Value);
             TextBoxCyan.Text = CMYKToPercent(CMYK[0]);
             TextBoxMagenta.Text = CMYKToPercent(CMYK[1]);
             TextBoxYellow.Text = CMYKToPercent(CMYK[2]);
@@ -74,8 +77,7 @@ namespace color
 
         private void HexChange()
         {
-                var RGBBuilder = new HexToRGBBuilder();
-                int[] valueAr = RGBBuilder.ConvertHexToRGB(TextBoxHex.Text.ToUpper());
+                int[] valueAr = _hexToRGBBuilder.ConvertHexToRGB(TextBoxHex.Text.ToUpper());
                 SliderRed.Value = valueAr[0];
                 SliderGreen.Value = valueAr[1];
                 SliderBlue.Value = valueAr[2];
