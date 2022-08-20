@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using color.Builders;
 
 namespace color
 {
@@ -17,7 +18,7 @@ namespace color
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new MainForm(new RGBToHexBuilder(), new RGBToCMYKBuilder(), new HexToRGBBuilder()));
         }
     }
 }
